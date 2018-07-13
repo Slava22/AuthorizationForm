@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context="andrushkva.com.authorizationform.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.4"
+        android:src="@drawable/logo" />
+
+    <ScrollView
+        android:id="@+id/sw_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintTextAppearance="@style/MyHintText">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@id/edit_password"
+                    android:textColor="@color/white"
+                    android:theme="@style/MyEditTextTheme" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_layout_email"
+                android:layout_margin="20dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="12"
+                app:counterOverflowTextAppearance="@style/MyCounterText"
+                app:errorTextAppearance="@style/ErrorText"
+                app:hintTextAppearance="@style/MyHintText"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:theme="@style/MyEditTextTheme" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_layout_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/roundrect_button"
+                android:fontFamily="@font/helvetica_neue_cyr_medium"
+                android:text="@string/registration"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

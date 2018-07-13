@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AuthorizationForm</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="registration">Registration</string>
+
+    <string name="check_email_address">Check your email address</string>
+    <string name="check_domain">Please check the domain</string>
+    <string name="emty_field">Empty field</string>
+    <string name="enter_password">Enter the password</string>
+    <string name="enter_email">Enter the email</string>
+    <string name="less_password">Password can not be shorter than 8 characters</string>
+    <string name="longer_password">Password can not be longer than 12 characters</string>
+    <string name="no_internet">No internet connection</string>
+</resources>
